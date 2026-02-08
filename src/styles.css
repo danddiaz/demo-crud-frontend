@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #e7e1d6;
+  color: #5b3f2a;
+}
+
+.page {
+  min-height: 100vh;
+}
+
+.app {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  
+}
+
+/* header */
+
+.header {
+  background: #5b3f2a;
+  color: white;
+  text-align: center;
+  padding: 22px 0;
+  font-size: 22px;
+  font-weight: 600;
+  width: 100%;
+}
+
+/* content */
+
+.card {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* form */
+
+.form-wrap {
+  width: 100%;
+  max-width: 360px;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  border-radius: 20px;
+  border: none;
+  background: #b7ab9a;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+.input::placeholder {
+  color: #f2eee9;
+}
+
+.primary-btn {
+  width: 180px;
+  padding: 12px;
+  border-radius: 22px;
+  border: none;
+  background: #5b3f2a;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* list */
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.section-title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  width: 100%;
+}
+
+/* tasks */
+
+.task-row {
+  width: 100%;
+  background: #f3efe8;
+  padding: 14px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-text {
+  max-width: 240px;
+}
+
+.task-title {
+  font-weight: 700;
+  color: #5b3f2a;
+}
+
+.task-desc {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.pill-btn {
+  background: #5b3f2a;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  padding: 6px 12px;
+  margin-left: 6px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+button {
+  all: unset;
+  font-family: inherit;
+}
+
+.primary-btn {
+  display: block;
+  width: 95%;
+  padding: 12px;
+  border-radius: 22px;
+  background: #5b3f2a;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
