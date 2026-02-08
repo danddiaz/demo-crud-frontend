@@ -117,10 +117,6 @@ Este frontend está diseñado para integrarse con el repositorio backend:
 
 demo-crud-api
 
-## Licencia
-
-MIT
-
 
 Integración
 
