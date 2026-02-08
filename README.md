@@ -1,83 +1,66 @@
-Task Manager Frontend — React + Vite
+# Task Manager Frontend — React + Vite
 
 Cliente frontend desarrollado con React y Vite para la gestión de tareas mediante operaciones CRUD completas. La aplicación consume una API REST construida con Node.js + Express + Prisma y demuestra integración cliente–servidor, manejo de estado, validación de formularios y arquitectura por componentes.
 
-Stack Tecnológico
+## Stack Tecnológico
 
-React
+* React
+* Vite
+* JavaScript
+* Fetch API
+* CSS modular simple
+* Arquitectura por componentes
 
-Vite
+## Funcionalidades
 
-JavaScript
+* Listar tareas desde API REST
+* Crear tareas con validación de campos
+* Editar tareas en modo inline
+* Eliminar tareas
+* Validación mínima de longitud en frontend
+* Manejo de estados de carga
+* Manejo de errores de red
+* UI consistente con componentes reutilizables
 
-Fetch API
-
-CSS modular simple
-
-Arquitectura por componentes
-
-Funcionalidades
-
-Listar tareas desde API REST
-
-Crear tareas con validación de campos
-
-Editar tareas en modo inline
-
-Eliminar tareas
-
-Validación mínima de longitud en frontend
-
-Manejo de estados de carga
-
-Manejo de errores de red
-
-UI consistente con componentes reutilizables
-
-Arquitectura de Componentes
+## Arquitectura de Componentes
 
 src/
 
-api/ → funciones de acceso HTTP
+* api/ → funciones de acceso HTTP
+* components/
 
-components/
-
-TaskForm → formulario de creación
-
-TaskList → render de lista
-
-TaskItem → fila de tarea editable
-
-App.jsx → contenedor principal y estado global
-
-styles.css → estilos de interfaz
+  * TaskForm → formulario de creación
+  * TaskList → render de lista
+  * TaskItem → fila de tarea editable
+* App.jsx → contenedor principal y estado global
+* styles.css → estilos de interfaz
 
 Se separa la capa de UI de la capa de acceso a datos para facilitar mantenimiento y escalabilidad.
 
-Configuración e Instalación
+## Configuración e Instalación
 
 Clonar repositorio:
 
-git clone
+git clone <URL-DEL-REPO>
 cd demo-crud-frontend
 
 Instalar dependencias:
 
 npm install
 
-Ejecutar en desarrollo
+## Ejecutar en desarrollo
 
 npm run dev
 
 Servidor de desarrollo:
 
-http://localhost:5174
+[http://localhost:5174](http://localhost:5174)
 
-Configuración de API
+## Configuración de API
 
 El frontend espera que el backend esté corriendo en:
 
-http://localhost:3000
+[http://localhost:3000](http://localhost:3000)
 
 Archivo:
 
@@ -85,65 +68,59 @@ src/api/tasks.js
 
 Define las funciones:
 
-getTasks
-
-createTask
-
-updateTask
-
-deleteTask
+* getTasks
+* createTask
+* updateTask
+* deleteTask
 
 Si el backend corre en otro puerto, actualizar BASE_URL.
 
-Validaciones de Formulario
+## Validaciones de Formulario
 
 Se validan campos antes de enviar:
 
-título mínimo 3 caracteres
-
-descripción mínimo 3 caracteres
+* título mínimo 3 caracteres
+* descripción mínimo 3 caracteres
 
 Si no se cumple, se muestra mensaje de error y no se envía la petición.
 
-Manejo de Estado
+## Manejo de Estado
 
 La aplicación usa:
 
-estado global de tareas en App
+* estado global de tareas en App
+* estado local en formularios
+* recarga de datos tras mutaciones (create/update/delete)
+* modo edición controlado por id activo
 
-estado local en formularios
+## Estilos de Interfaz
 
-recarga de datos tras mutaciones (create/update/delete)
+* Layout centrado en columna
+* Componentes de botón reutilizables tipo “pill”
+* Paleta de colores consistente
+* Inputs redondeados
+* Tarjetas de tarea con acciones inline
 
-modo edición controlado por id activo
+## Posibles Mejoras
 
-Estilos de Interfaz
+* Paginación
+* Filtros y búsqueda
+* Marcar tareas completadas
+* Toast notifications
+* Tests de componentes
+* Manejo de caché de datos
+* Integración con React Query
 
-Layout centrado en columna
+## Integración
 
-Componentes de botón reutilizables tipo “pill”
+Este frontend está diseñado para integrarse con el repositorio backend:
 
-Paleta de colores consistente
+demo-crud-api
 
-Inputs redondeados
+## Licencia
 
-Tarjetas de tarea con acciones inline
+MIT
 
-Posibles Mejoras
-
-Paginación
-
-Filtros y búsqueda
-
-Marcar tareas completadas
-
-Toast notifications
-
-Tests de componentes
-
-Manejo de caché de datos
-
-Integración con React Query
 
 Integración
 
