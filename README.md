@@ -1,16 +1,152 @@
-# React + Vite
+Task Manager Frontend — React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Cliente frontend desarrollado con React y Vite para la gestión de tareas mediante operaciones CRUD completas. La aplicación consume una API REST construida con Node.js + Express + Prisma y demuestra integración cliente–servidor, manejo de estado, validación de formularios y arquitectura por componentes.
 
-Currently, two official plugins are available:
+Stack Tecnológico
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React
 
-## React Compiler
+Vite
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+JavaScript
 
-## Expanding the ESLint configuration
+Fetch API
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+CSS modular simple
+
+Arquitectura por componentes
+
+Funcionalidades
+
+Listar tareas desde API REST
+
+Crear tareas con validación de campos
+
+Editar tareas en modo inline
+
+Eliminar tareas
+
+Validación mínima de longitud en frontend
+
+Manejo de estados de carga
+
+Manejo de errores de red
+
+UI consistente con componentes reutilizables
+
+Arquitectura de Componentes
+
+src/
+
+api/ → funciones de acceso HTTP
+
+components/
+
+TaskForm → formulario de creación
+
+TaskList → render de lista
+
+TaskItem → fila de tarea editable
+
+App.jsx → contenedor principal y estado global
+
+styles.css → estilos de interfaz
+
+Se separa la capa de UI de la capa de acceso a datos para facilitar mantenimiento y escalabilidad.
+
+Configuración e Instalación
+
+Clonar repositorio:
+
+git clone
+cd demo-crud-frontend
+
+Instalar dependencias:
+
+npm install
+
+Ejecutar en desarrollo
+
+npm run dev
+
+Servidor de desarrollo:
+
+http://localhost:5174
+
+Configuración de API
+
+El frontend espera que el backend esté corriendo en:
+
+http://localhost:3000
+
+Archivo:
+
+src/api/tasks.js
+
+Define las funciones:
+
+getTasks
+
+createTask
+
+updateTask
+
+deleteTask
+
+Si el backend corre en otro puerto, actualizar BASE_URL.
+
+Validaciones de Formulario
+
+Se validan campos antes de enviar:
+
+título mínimo 3 caracteres
+
+descripción mínimo 3 caracteres
+
+Si no se cumple, se muestra mensaje de error y no se envía la petición.
+
+Manejo de Estado
+
+La aplicación usa:
+
+estado global de tareas en App
+
+estado local en formularios
+
+recarga de datos tras mutaciones (create/update/delete)
+
+modo edición controlado por id activo
+
+Estilos de Interfaz
+
+Layout centrado en columna
+
+Componentes de botón reutilizables tipo “pill”
+
+Paleta de colores consistente
+
+Inputs redondeados
+
+Tarjetas de tarea con acciones inline
+
+Posibles Mejoras
+
+Paginación
+
+Filtros y búsqueda
+
+Marcar tareas completadas
+
+Toast notifications
+
+Tests de componentes
+
+Manejo de caché de datos
+
+Integración con React Query
+
+Integración
+
+Este frontend está diseñado para integrarse con el repositorio backend:
+
+demo-crud-api
